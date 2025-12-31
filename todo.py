@@ -1,9 +1,20 @@
 # To-Do List Manager - Initial Version
 def delete_task(tasks):
+    if not tasks:
+        print("No tasks to delete.")
+        return
+
     view_tasks(tasks)
-    index = int(input("Enter task number to delete: ")) - 1
-    removed = tasks.pop(index)
-    print(f"Task '{removed}' deleted.")
+    try:
+        index = int(input("Enter task number to delete: ")) - 1
+        if 0 <= index < len(tasks):
+            removed = tasks.pop(index)
+            print(f"Task '{removed}' deleted.")
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Please enter a valid number.")
+
 
 def show_menu():
     print("\n--- To-Do List Manager ---")
