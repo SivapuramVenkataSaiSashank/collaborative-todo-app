@@ -4,6 +4,10 @@ def show_menu():
     print("\n--- To-Do List Manager ---")
     print("1. View Tasks")
     print("2. Exit")
+def add_task(tasks):
+    task = input("Enter new task: ")
+    tasks.append(task)
+    print("Task added successfully.")
 
 def view_tasks(tasks):
     if len(tasks) == 0:
