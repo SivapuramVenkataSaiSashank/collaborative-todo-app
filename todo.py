@@ -1,4 +1,9 @@
 # To-Do List Manager - Initial Version
+def delete_task(tasks):
+    view_tasks(tasks)
+    index = int(input("Enter task number to delete: ")) - 1
+    removed = tasks.pop(index)
+    print(f"Task '{removed}' deleted.")
 
 def show_menu():
     print("\n--- To-Do List Manager ---")
