@@ -4,6 +4,7 @@ def delete_task(tasks):
         print("No tasks to delete.")
         return
 
+<<<<<<< HEAD
     view_tasks(tasks)
     index = int(input("Enter task number to delete: ")) - 1
 
@@ -12,6 +13,16 @@ def delete_task(tasks):
         print(f"Task '{removed}' deleted.")
     else:
         print("Invalid task number.")
+=======
+def show_menu():
+    print("\n--- To-Do List Manager ---")
+    print("1. View Tasks")
+    print("2. Exit")
+def add_task(tasks):
+    task = input("Enter new task: ")
+    tasks.append(task)
+    print("Task added successfully.")
+>>>>>>> 85e47026e881ada5dfe24673c603e8e064c64ff9
 
 def view_tasks(tasks):
     if len(tasks) == 0:
